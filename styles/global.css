@@ -45,3 +45,9 @@
 body{
   background-color: var(--background-primary);
 }
+
+input,button{
+  all: unset;
+}
+
+

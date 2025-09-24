@@ -5,6 +5,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/index.css">
@@ -34,29 +39,34 @@
     </div>
 
     <div class="contentright">
-      <span>QUERO SORTEAR:</span>
-      <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
-        fácil!</p>
-
-      <div class="wrapperinput">
-        <span>NÚMEROS</span>
-        <input type="number">
+      <div class="righthd">
+        <span>QUERO SORTEAR:</span>
+        <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
+          fácil!</p>
       </div>
 
-      <div class="wrapperinput">
-        <span>DE</span>
-        <input type="number">
+      <div class="flex">
+        <div class="wrapperinputs">
+          <span>NÚMEROS</span>
+          <input type="number">
+        </div>
+        <div class="wrapperinputs">
+          <span>DE</span>
+          <input type="number">
+        </div>
+        <div class="wrapperinputs">
+          <span>DE</span>
+          <input type="number">
+        </div>
       </div>
 
-      <div class="wrapperinput">
-        <span>DE</span>
-        <input type="number">
-      </div>
-      <div class="inputcheck">
-        <input type="checkbox"><span>Não repetir número</span>
-      </div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+        <span class="txt">Não repetir número</span>
+      </label>
 
-      <button>Sortear <img src="assets/icons/arrowright.png" alt=""></button>
+      <button class="roll" id="roll">SORTEAR<img src="assets/icons/arrowright.png" alt=""></button>
     </div>
   </main>
 
