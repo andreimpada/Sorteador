@@ -4,50 +4,60 @@
   box-sizing: border-box;
 }
 
-:root{
-  --content-primary:#FFFFFF;
-  --content-secondary:#C7C9CC;
-  --content-tertiary:#D9D9D9;
-  --content-brand:#C58DE7;
-  --content-inverse:#030203;
+:root {
+  --content-primary: #FFFFFF;
+  --content-secondary: #C7C9CC;
+  --content-tertiary: #D9D9D9;
+  --content-brand: #C58DE7;
+  --content-inverse: #030203;
 
   --background-primary: #020202;
   --background-secondary: #111012;
   --background-tertiary: #24222E;
-  --background-brand:#C58DE7;
-  --background-gray:#3D3D3D;
+  --background-brand: #C58DE7;
+  --background-gray: #3D3D3D;
 
-  --accent-pink:#D586E0;
-  --accent-blue:#91A1FA;
-  --accent-green:#77C0A9;
-  --accent-lime:#D1DC97;
-  --accent-red:#E9A9B3;
+  --accent-pink: #D586E0;
+  --accent-blue: #91A1FA;
+  --accent-green: #77C0A9;
+  --accent-lime: #D1DC97;
+  --accent-red: #E9A9B3;
 
-  --gradient-border:#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%;
-  --gradient-background:#D586E0 0%, #91A1FA 98.93%;
-  --gradient-content:#C7C9CC 0%, #3D3D3D 100%;
+  --gradient-border: #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%;
+  --gradient-background: #D586E0 0%, #91A1FA 98.93%;
+  --gradient-content: #C7C9CC 0%, #3D3D3D 100%;
 
-/* font sora */
+  /* font sora */
   --displaylg: 800 72px/130% "Sora", sans-serif;
   --displaymd: 800 40px/130% "Sora", sans-serif;
   --displaysm: 700 32px/130% "Sora", sans-serif;
-/* font roboto flex */
---paragraphlg: 500 16px/150% "Roboto Flex", sans-serif;
---paragraphmd: 500 14px/150% "Roboto Flex", sans-serif;
---paragraphsm: 500 12px/150% "Roboto Flex", sans-serif;
---labelmd: 700 20px/150% "Roboto Flex", sans-serif;
---labelsm: 700 16px/150% "Roboto Flex", sans-serif;
-/* font roboto mono*/
---overline: 700 24px/150% "Roboto Mono", sans-serif;
+  /* font roboto flex */
+  --paragraphlg: 500 16px/150% "Roboto Flex", sans-serif;
+  --paragraphmd: 500 14px/150% "Roboto Flex", sans-serif;
+  --paragraphsm: 500 12px/150% "Roboto Flex", sans-serif;
+  --labelmd: 700 20px/150% "Roboto Flex", sans-serif;
+  --labelsm: 700 16px/150% "Roboto Flex", sans-serif;
+  /* font roboto mono*/
+  --overline: 700 24px/150% "Roboto Mono", sans-serif;
+  --overlinesm: 700 16px/150% "Roboto Mono", sans-serif;
+  --overlinerslt: 700 48px/150% "Roboto Mono", sans-serif;
 
 }
 
-body{
+body {
+
   background-color: var(--background-primary);
+  background-image: linear-gradient(rgba(0, 0, 0, 1) 0%,
+  rgba(0,0,0,0.7)60%,
+      rgba(0, 0, 0, 0.7) 100%),
+    url('../assets/footerbackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  min-height: 100vh;
 }
 
-input,button{
+input,
+button,ul,li {
   all: unset;
 }
-
-

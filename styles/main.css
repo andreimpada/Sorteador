@@ -20,11 +20,9 @@ header {
 main {
   display: flex;
   gap: 108px;
-  border: 1px solid green;
 }
 
 .contentleft {
-  border: 3px solid pink;
   width: 515px;
   height: 412px;
   margin-left: 135px;
@@ -218,14 +216,14 @@ main {
   }
 
   .switch input:checked+.slider {
-    background-image: linear-gradient(to right, #D586E0,#91A1FA);
+    background-image: linear-gradient(to right, #D586E0, #91A1FA);
   }
 
   .switch input:checked+.slider::before {
     transform: translateX(10px);
   }
 
-  .roll{
+  .roll {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,6 +234,109 @@ main {
     border-radius: 8px;
     font: var(--labelmd);
     color: var(--content-primary);
+    cursor: pointer;
+  }
+
+  .resulthd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    & h2 {
+      font: var(--labelmd);
+      color: var(--content-primary);
+    }
+
+    & p {
+      text-align: center;
+      font: var(--overlinesm);
+      color: var(--content-secondary);
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    width: 86px;
+    background-color: var(--background-brand);
+    border-radius: 28px;
+    animation: fadeIn 1s ease forwards 0s, rotate 2s ease forwards 1.1s, removebg 1s ease-in forwards 3s;
+  }
+
+  li span {
+
+    font: var(--overlinerslt);
+    opacity: 0;
+    animation: spanIn 1s ease forwards 0.8s, colorInherit 1s ease forwards 3s;
+
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1.1)
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1.1)
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes removebg {
+  0% {
+    background-color: var(--background-brand);
+  }
+
+  100% {
+    background-color: var(--background-primary);
+  }
+}
+
+@keyframes spanIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes colorInherit {
+  0% {
+    color: var(--background-primary);
+  }
+
+  100% {
+    color: var(--content-brand);
   }
 
 }
