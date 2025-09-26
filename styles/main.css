@@ -1,12 +1,17 @@
+.page-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
 header {
   width: 180px;
   display: flex;
   align-items: center;
   text-align: center;
   gap: 11px;
-  margin-left: 430px;
-  margin-top: 76px;
-  margin-bottom: 89px;
+  margin: 76px 0 89px 8vw;
 
   & span {
     font-size: 24px;
@@ -15,7 +20,6 @@ header {
     font-weight: 700;
     color: var(--content-primary);
   }
-
 }
 
 main {
@@ -32,7 +36,7 @@ main {
 
   &>span {
     font: var(--overline);
-    background: linear-gradient(90deg, #C7C9CC 0%, #3D3D3D 100%);
+    background: linear-gradient(90deg, #C7C9CC 10%, #3D3D3D 200%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -71,7 +75,6 @@ main {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   width: 482px;
 
   .righthd {
@@ -223,7 +226,7 @@ main {
     transform: translateX(10px);
   }
 
-  .btn{
+  .btn {
     position: relative;
     display: flex;
     align-items: center;
@@ -243,7 +246,13 @@ main {
     cursor: pointer;
   }
 
-  .btn:hover {
+  .btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn.is-active {
     padding: 2px;
     -webkit-background-clip: padding-box, border-box;
     background-clip: padding-box, border-box;
@@ -251,23 +260,18 @@ main {
     background-clip: content-box, border-box;
     box-sizing: border-box;
     background-clip: content-box, border-box;
+
+    background-size: 200% 200%;
     background-image:
-      linear-gradient(#23212b, #23212b),
+      linear-gradient(#111012, #111012),
       linear-gradient(90deg, #8ef09d, #f38eeb, #8eaef3, #8ef09d);
+    animation: animateBorder 3s linear infinite;
 
   }
 
-  .btn span svg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .btn.is-active span svg {
+    animation: slideRight 2.5s ease forwards;
   }
-
-  .btn:hover span svg {
-    animation: slideLeft 2.5s ease forwards;
-  }
-
-
 
   .resulthd {
     display: flex;
@@ -374,9 +378,43 @@ main {
 
 }
 
-@keyframes slideLeft {
-0% {transform: translateX(0px);}
-50% {transform: translateX(8px);}
-100% {transform: translateX(0px);}
+@keyframes slideRight {
+  0% {
+    transform: translateX(0px);
+  }
 
+  50% {
+    transform: translateX(8px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+
+}
+
+@keyframes animateBorder {
+  0% {
+    background-position: 0% 0%;
+    /* Inicia no canto */
+  }
+
+  50% {
+    background-position: 100% 100%;
+    /* Move para o canto oposto */
+  }
+
+  100% {
+    background-position: 0% 0%;
+    /* Volta ao início (ciclo infinito) */
+  }
+}
+
+@keyframes spinReload {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
