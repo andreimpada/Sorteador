@@ -308,7 +308,9 @@ main {
     background-color: var(--background-brand);
     border-radius: 28px;
     gap: 10px;
-    animation: fadeIn 1s ease forwards 0s, rotate 2s ease forwards 1.1s, removebg 1s ease-in forwards 3s;
+    animation: fadeIn 1s ease forwards,
+      rotate 2s ease forwards 1.1s,
+      removebg 1s ease-in forwards 3s;
   }
 
   li span {
@@ -411,10 +413,11 @@ main {
 }
 
 @keyframes spinReload {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
