@@ -226,6 +226,13 @@ main {
     transform: translateX(10px);
   }
 
+
+
+
+
+
+
+
   .btn {
     position: relative;
     display: flex;
@@ -236,6 +243,7 @@ main {
     background-color: var(--background-tertiary);
     gap: 8px;
     border-radius: 8px;
+    transition: all 0.3s ease-in-out;
   }
 
   .roll {
@@ -252,7 +260,7 @@ main {
     align-items: center;
   }
 
-  .btn.is-active {
+  .btn.btn.is-active {
     padding: 2px;
     -webkit-background-clip: padding-box, border-box;
     background-clip: padding-box, border-box;
@@ -272,6 +280,14 @@ main {
   .btn.is-active span svg {
     animation: slideRight 2.5s ease forwards;
   }
+
+
+
+
+
+
+
+
 
   .resulthd {
     display: flex;
