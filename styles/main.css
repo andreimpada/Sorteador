@@ -338,6 +338,10 @@ main {
   }
 }
 
+#result-view {
+    display: none; /* Começa invisível e não ocupa espaço */
+}
+
 
 @keyframes rotate {
   0% {
