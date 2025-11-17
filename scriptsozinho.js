@@ -1,10 +1,12 @@
 //capturando objetos
 
-const btn = document.getElementById('roll');
+const btn = document.getElementById('btn');
 const rng1 = document.getElementById('rng1');
 const rng2 = document.getElementById('rng2');
 const checkbox = document.getElementById('checkbox');
 const nmqt = document.getElementById('nmqt');
+const configView = document.getElementById('config-view');
+const resultView = document.getElementById('result-view');
 
 
 
@@ -68,6 +70,10 @@ btn.addEventListener('click', function () {
   }
   resultado.sort((a,b) => a -b);
   console.log(resultado);
+
+  //trocando o config para result
+  configView.classList.toggle('esconder');
+  resultView.classList.toggle('esconder');
 });
 
 

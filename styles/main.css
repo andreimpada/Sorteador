@@ -338,8 +338,8 @@ main {
   }
 }
 
-#result-view {
-    display: none; /* Começa invisível e não ocupa espaço */
+.esconder{
+  display:none;
 }
 
 
