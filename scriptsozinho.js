@@ -8,7 +8,7 @@ const nmqt = document.getElementById('nmqt');
 const configView = document.getElementById('config-view');
 const resultView = document.getElementById('result-view');
 const reroll = document.getElementById('btnReroll');
-const resultados = document.getElementById ('lista-resultados');
+const resultados = document.getElementById('lista-resultados');
 
 
 
@@ -34,9 +34,9 @@ btn.addEventListener('click', function () {
   const naoRepetir = checkbox.checked;
 
   //transformando valores em números
-  let rng1n = parseInt(rng1.value,10);
-  let rng2n = parseInt(rng2.value,10);
-  let nmqtn = parseInt(nmqt.value,10);
+  let rng1n = parseInt(rng1.value, 10);
+  let rng2n = parseInt(rng2.value, 10);
+  let nmqtn = parseInt(nmqt.value, 10);
 
   //validações
 
@@ -74,18 +74,26 @@ btn.addEventListener('click', function () {
     }
     resultado.push(numAleatorio);
   }
-  resultado.sort((a,b) => a -b);
-  
+  resultado.sort((a, b) => a - b);
+
   //mostrando resultado na tela
+  const atrasoBase = 2;
+  resultado.forEach((num, index) => {
 
-  resultado.forEach(num => {
+    //cria li e span
+    const novoItem = document.createElement('li');
+    const novoSpan = document.createElement('span');
+    // adiciona o resultado no span, e dps o span no li
 
-    const novoItem = document.createElement ('li');
+    //delay da animação
+    const delayTotal = index * atrasoBase
+    novoItem.style.animationDelay = `${delayTotal}s`
+    novoSpan.style.animationDelay = `${delayTotal}s`;
 
-    novoItem.textContent = num;
 
-    resultados.appendChild (novoItem);
-
+    novoSpan.textContent = num;
+    novoItem.appendChild(novoSpan);
+    resultados.appendChild(novoItem);
   })
 
 
@@ -97,13 +105,23 @@ btn.addEventListener('click', function () {
 
 //botão reroll
 
-reroll.addEventListener ('mouseenter',function(){
-  reroll.classList.add ('is-active')
+reroll.addEventListener('mouseenter', function () {
+  reroll.classList.add('is-active')
 });
 
-reroll.addEventListener ('mouseleave',function(){
-  reroll.classList.remove ('is-active')
+reroll.addEventListener('mouseleave', function () {
+  reroll.classList.remove('is-active')
 });
+
+reroll.addEventListener ('click', function () {
+  resultados.innerHTML = '';
+
+  
+  //trocando o result para config
+  configView.classList.toggle('esconder');
+  resultView.classList.toggle('esconder');
+
+})
 
 
 

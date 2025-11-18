@@ -98,7 +98,6 @@ main {
     gap: 12px;
   }
 
-
   .wrapperinputs {
     height: 88px;
     width: 86px;
@@ -227,12 +226,6 @@ main {
   }
 
 
-
-
-
-
-
-
   .btn {
     position: relative;
     display: flex;
@@ -281,20 +274,12 @@ main {
     animation: slideRight 2.5s ease forwards;
   }
 
-
-
-
-
-
-
-
-
   .resulthd {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
     & h2 {
       font: var(--labelmd);
@@ -309,39 +294,42 @@ main {
   }
 
   ul {
+
+    scrollbar-width: none;
+    width: 480px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 190px;
     display: flex;
-    gap: 4px;
+    flex-wrap: wrap;
+    gap: 25px;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 
   ul li {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 88px;
     width: 86px;
-    background-color: var(--background-brand);
     border-radius: 28px;
-    gap: 10px;
     animation: fadeIn 1s ease forwards,
       rotate 2s ease forwards 1.1s,
       removebg 1s ease-in forwards 3s;
   }
 
   li span {
-
     font: var(--overlinerslt);
     opacity: 0;
     animation: spanIn 1s ease forwards 0.8s, colorInherit 1s ease forwards 3s;
-
   }
 }
 
-.esconder{
-  display:none;
+.esconder {
+  display: none;
 }
-
 
 @keyframes rotate {
   0% {
@@ -374,6 +362,10 @@ main {
     background-color: var(--background-brand);
   }
 
+  75% {
+    background-color: var(--background-brand);
+  }
+
   100% {
     background-color: transparent;
   }
@@ -391,6 +383,11 @@ main {
 
 @keyframes colorInherit {
   0% {
+    color: var(--background-primary)d;
+  }
+
+
+  75% {
     color: var(--background-primary)d;
   }
 
