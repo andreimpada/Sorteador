@@ -7,10 +7,14 @@ const checkbox = document.getElementById('checkbox');
 const nmqt = document.getElementById('nmqt');
 const configView = document.getElementById('config-view');
 const resultView = document.getElementById('result-view');
+const reroll = document.getElementById('btnReroll');
+const resultados = document.getElementById ('lista-resultados');
 
 
 
 //botão hover
+
+
 
 btn.addEventListener('mouseenter', function () {
   btn.classList.add('is-active')
@@ -21,6 +25,8 @@ btn.addEventListener('mouseleave', function () {
 });
 
 btn.addEventListener('click', function () {
+
+  resultados.innerHTML = '';
 
   let resultado = [];
 
@@ -69,12 +75,37 @@ btn.addEventListener('click', function () {
     resultado.push(numAleatorio);
   }
   resultado.sort((a,b) => a -b);
-  console.log(resultado);
+  
+  //mostrando resultado na tela
+
+  resultado.forEach(num => {
+
+    const novoItem = document.createElement ('li');
+
+    novoItem.textContent = num;
+
+    resultados.appendChild (novoItem);
+
+  })
+
+
 
   //trocando o config para result
   configView.classList.toggle('esconder');
   resultView.classList.toggle('esconder');
 });
+
+//botão reroll
+
+reroll.addEventListener ('mouseenter',function(){
+  reroll.classList.add ('is-active')
+});
+
+reroll.addEventListener ('mouseleave',function(){
+  reroll.classList.remove ('is-active')
+});
+
+
 
 
 

@@ -391,7 +391,7 @@ main {
 
 @keyframes colorInherit {
   0% {
-    color: var(--background-primary);
+    color: var(--background-primary)d;
   }
 
   100% {
