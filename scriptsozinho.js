@@ -10,7 +10,17 @@ const resultView = document.getElementById('result-view');
 const reroll = document.getElementById('btnReroll');
 const resultados = document.getElementById('lista-resultados');
 
+//troca os inputs de string para numeros 
+function limparNaoNumericos(event) {
+    let input = event.target;
+    // Regex: Substitui tudo que NÃO for número (0-9) por nada.
+    input.value = input.value.replace(/[^0-9]/g, ''); 
+}
 
+// CONEXÃO DOS LISTENERS:
+rng1.addEventListener('input', limparNaoNumericos);
+rng2.addEventListener('input', limparNaoNumericos);
+nmqt.addEventListener('input', limparNaoNumericos);
 
 //botão hover
 
